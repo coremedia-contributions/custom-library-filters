@@ -1,5 +1,3 @@
-import CoreIcons_properties from "@coremedia/studio-client.core-icons/CoreIcons_properties";
-
 /**
  * Interface values for ResourceBundle "FeedbackHubABTesting".
  * @see CustomLibraryFilter_properties#INSTANCE
@@ -21,7 +19,7 @@ interface CustomLibraryFilter_properties {
  * Singleton for the current user Locale's instance of ResourceBundle "FeedbackHubABTesting".
  * @see CustomLibraryFilter_properties
  */
-const FeedbackHubABTesting_properties: CustomLibraryFilter_properties = {
+const CustomLibraryFilter_properties: CustomLibraryFilter_properties = {
   LibrarySizeFilter_title: "Blob Size",
   LibrarySizeFilter_label_minSize: "Minimum",
   LibrarySizeFilter_label_maxSize: "Maximum",
@@ -32,4 +30,4 @@ const FeedbackHubABTesting_properties: CustomLibraryFilter_properties = {
   SizeColumn_header: "Size"
 };
 
-export default FeedbackHubABTesting_properties;
+export default CustomLibraryFilter_properties;
