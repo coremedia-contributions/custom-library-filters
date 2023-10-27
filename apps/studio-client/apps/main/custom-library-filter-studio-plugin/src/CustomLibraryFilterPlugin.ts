@@ -15,13 +15,13 @@ import OrphanedContentFilterPanel from "./filters/OrphanedContentFilterPanel";
 import ConfigureCollectionViewColumnsPlugin from "./blueprint-forms/ConfigureCollectionViewColumnsPlugin";
 import EditorStartup from "@coremedia/studio-client.main.editor-components/sdk/desktop/EditorStartup";
 
-interface CustomLibraryFilterStudioPluginConfig extends Config<StudioPlugin> {
+interface CustomLibraryFilterPluginConfig extends Config<StudioPlugin> {
 
 }
 
 class CustomLibraryFilterPlugin extends StudioPlugin {
 
-  declare Config: CustomLibraryFilterStudioPluginConfig;
+  declare Config: CustomLibraryFilterPluginConfig;
 
   constructor(config: Config<CustomLibraryFilterPlugin> = null) {
     // @ts-expect-error Ext JS semantics
