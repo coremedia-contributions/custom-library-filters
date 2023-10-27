@@ -19,14 +19,14 @@ interface CustomLibraryFilterStudioPluginConfig extends Config<StudioPlugin> {
 
 }
 
-class CustomLibraryFilterStudioPlugin extends StudioPlugin {
+class CustomLibraryFilterPlugin extends StudioPlugin {
 
   declare Config: CustomLibraryFilterStudioPluginConfig;
 
-  constructor(config: Config<CustomLibraryFilterStudioPlugin> = null) {
+  constructor(config: Config<CustomLibraryFilterPlugin> = null) {
     // @ts-expect-error Ext JS semantics
     const this$ = this;
-    super(ConfigUtils.apply(Config(CustomLibraryFilterStudioPlugin, {
+    super(ConfigUtils.apply(Config(CustomLibraryFilterPlugin, {
 
       rules: [
 
@@ -65,4 +65,4 @@ class CustomLibraryFilterStudioPlugin extends StudioPlugin {
 
 }
 
-export default CustomLibraryFilterStudioPlugin;
+export default CustomLibraryFilterPlugin;

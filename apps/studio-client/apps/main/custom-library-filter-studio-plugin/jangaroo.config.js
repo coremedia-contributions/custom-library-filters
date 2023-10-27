@@ -3,11 +3,10 @@ const { jangarooConfig } = require("@jangaroo/core");
 module.exports = jangarooConfig({
   type: "code",
   sencha: {
-    name: "com.coremedia.blueprint__custom-library-filter-studio-plugin",
-    namespace: "com.coremedia.blueprint.studio",
+    namespace: "com.coremedia.blueprint.studio.custom.library.filters",
     studioPlugins: [
       {
-        mainClass: "com.coremedia.blueprint.studio.CustomLibraryFilterPlugin",
+        mainClass: "com.coremedia.blueprint.studio.custom.library.filters.CustomLibraryFilterPlugin",
         name: "Custom Library Filter Extension",
       },
     ],
