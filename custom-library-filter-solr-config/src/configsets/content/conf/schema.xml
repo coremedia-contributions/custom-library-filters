@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<schema name="cae" version="1.6">
+<schema name="content" version="1.6">
   <field name="size" type="plong" indexed="true" stored="true"/>
 </schema>

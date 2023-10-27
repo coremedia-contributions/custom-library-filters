@@ -30,12 +30,14 @@ class CustomLibraryFilterPlugin extends StudioPlugin {
 
       rules: [
 
-        Config(EditorStartup, {
+     /*   Config(EditorStartup, {
           plugins: [
             Config(ConfigureCollectionViewColumnsPlugin),
           ],
         }),
 
+
+      */
         Config(SearchFilters, {
           plugins: [
             Config(AddItemsPlugin, {
