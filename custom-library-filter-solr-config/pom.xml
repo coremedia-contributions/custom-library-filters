@@ -23,7 +23,7 @@
         <executions>
           <!-- Prepare the configsets. -->
           <execution>
-            <id>my-extension-copy-solr-config</id>
+            <id>custom-library-filter-solr-config</id>
             <phase>process-resources</phase>
             <goals>
               <goal>copy-resources</goal>
@@ -45,7 +45,7 @@
         <executions>
           <!-- Build solrconfig zip. -->
           <execution>
-            <id>create-my-extension-solr-config-zip</id>
+            <id>custom-library-filter-config-zip</id>
             <goals>
               <goal>single</goal>
             </goals>
