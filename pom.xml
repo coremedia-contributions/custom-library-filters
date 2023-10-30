@@ -9,7 +9,6 @@
 
   <modules>
     <module>custom-library-filter-contentfeeder</module>
-    <module>custom-library-filter-solr-config</module>
   </modules>
 
 </project>
