@@ -9,13 +9,10 @@
 
   <customize:append id="addLibraryFieldFeedablePopulators" bean="index" property="feedablePopulators">
     <list>
-      <ref bean="blobSizeFeedablePopulator"/>
+      <bean id="blobSizeFeedablePopulator"
+            class="com.coremedia.blueprint.feeder.populate.BlobSizeFeedablePopulator">
+      </bean>
     </list>
   </customize:append>
-
-
-  <bean id="blobSizeFeedablePopulator"
-        class="com.coremedia.blueprint.feeder.populate.BlobSizeFeedablePopulator">
-  </bean>
 
 </beans>
