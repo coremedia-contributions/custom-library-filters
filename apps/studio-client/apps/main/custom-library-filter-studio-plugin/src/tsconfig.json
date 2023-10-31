@@ -11,10 +11,5 @@
       "@coremedia/studio-client.main.editor-components",
       "@jangaroo/ext-ts"
     ]
-  },
-  "references": [
-    {
-      "path": "../../../../../../../../../apps/studio-client/apps/main/blueprint-forms/src"
-    }
-  ]
+  }
 }

@@ -12,8 +12,6 @@ import SiteFilterPanel from "@coremedia/studio-client.main.editor-components/sdk
 import CustomLibraryFilter_properties from "./CustomLibraryFilter_properties";
 import SizeFilterPanel from "./filters/SizeFilterPanel";
 import OrphanedContentFilterPanel from "./filters/OrphanedContentFilterPanel";
-import ConfigureCollectionViewColumnsPlugin from "./blueprint-forms/ConfigureCollectionViewColumnsPlugin";
-import EditorStartup from "@coremedia/studio-client.main.editor-components/sdk/desktop/EditorStartup";
 
 interface CustomLibraryFilterPluginConfig extends Config<StudioPlugin> {
 
@@ -30,14 +28,6 @@ class CustomLibraryFilterPlugin extends StudioPlugin {
 
       rules: [
 
-     /*   Config(EditorStartup, {
-          plugins: [
-            Config(ConfigureCollectionViewColumnsPlugin),
-          ],
-        }),
-
-
-      */
         Config(SearchFilters, {
           plugins: [
             Config(AddItemsPlugin, {
