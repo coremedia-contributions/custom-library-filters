@@ -12,6 +12,9 @@
       <bean id="blobSizeFeedablePopulator"
             class="com.coremedia.blueprint.feeder.populate.BlobSizeFeedablePopulator">
       </bean>
+      <bean id="orphanedContentFeedablePopulator"
+            class="com.coremedia.blueprint.feeder.populate.OrphanedContentFeedablePopulator">
+      </bean>
     </list>
   </customize:append>
 

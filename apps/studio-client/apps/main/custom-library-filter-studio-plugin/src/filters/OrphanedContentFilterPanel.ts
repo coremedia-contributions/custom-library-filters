@@ -59,7 +59,7 @@ class OrphanedContentFilterPanel extends FilterPanel {
       return null
     }
 
-    return "NOT references:[* TO *]"
+    return "orphaned:true"
   }
 
   override getDefaultState(): any {

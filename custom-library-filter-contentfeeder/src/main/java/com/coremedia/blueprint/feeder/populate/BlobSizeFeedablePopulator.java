@@ -11,7 +11,7 @@ public class BlobSizeFeedablePopulator implements FeedablePopulator<Content> {
   @Override
   public void populate(MutableFeedable feedable, Content content) {
     if (feedable == null || content == null) {
-      throw new IllegalArgumentException("feedable and content must not be null");
+      throw new IllegalArgumentException(OrphanedContentFeedablePopulator.FEEDABLE_AND_CONTENT_MUST_NOT_BE_NULL);
     }
 
     if (content.getType().isSubtypeOf("CMPicture")) {
