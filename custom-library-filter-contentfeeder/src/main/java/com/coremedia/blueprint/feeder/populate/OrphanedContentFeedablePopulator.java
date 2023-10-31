@@ -1,10 +1,15 @@
 package com.coremedia.blueprint.feeder.populate;
 
 import com.coremedia.cap.content.Content;
+import com.coremedia.cap.content.ContentType;
 import com.coremedia.cap.feeder.MutableFeedable;
 import com.coremedia.cap.feeder.populate.FeedablePopulator;
 
 import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.*;
 
 public class OrphanedContentFeedablePopulator implements FeedablePopulator<Content> {
   static final String SOLR_IS_ORPHANED_FIELD_NAME = "orphaned";
@@ -18,7 +23,11 @@ public class OrphanedContentFeedablePopulator implements FeedablePopulator<Conte
     boolean orphaned;
     Collection<Content> referrers = content.getReferrersFulfilling("NOT isDeleted");
     if (referrers != null) {
-      orphaned = referrers.isEmpty();
+      List<Content> filteredReferrers = referrers
+              .stream()
+              .filter(ref -> ref.getType().isSubtypeOf("CMObject"))
+              .collect(toList());
+      orphaned = filteredReferrers.isEmpty();
       feedable.setStringElement(SOLR_IS_ORPHANED_FIELD_NAME, String.valueOf(orphaned));
     }
   }
