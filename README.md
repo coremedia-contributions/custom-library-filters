@@ -7,7 +7,7 @@ Custom library filters
 This extension bundles a set of additional filters for the Studio Library.
 
 The following filter are included 
-* **Blow size filter** 
+* **Blob size filter** 
 Allows to filter binary content items like pictures, videos and downloads by size. 
 This extension also includes the definition of a size column for the library. Follow the instructions below to integrate it into the library.
 * **Orphaned items filter**
