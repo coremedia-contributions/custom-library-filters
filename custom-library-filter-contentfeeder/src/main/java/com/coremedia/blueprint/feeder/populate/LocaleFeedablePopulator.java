@@ -10,6 +10,9 @@ import jakarta.annotation.PostConstruct;
 import java.util.Locale;
 import java.util.Optional;
 
+/**
+ * A {@link FeedablePopulator} to index the locale (as IETF BCP 47 language tag) of an CMLocalized content types.
+ */
 public class LocaleFeedablePopulator implements FeedablePopulator<Content> {
 
   private static final String SOLR_LOCALE_FIELD_NAME = "locale";
