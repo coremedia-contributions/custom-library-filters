@@ -3,6 +3,8 @@
  * @see CustomLibraryFilter_properties#INSTANCE
  */
 interface CustomLibraryFilter_properties {
+  LibraryLocaleFilter_title: string;
+  LibraryLocaleFilter_emptyText: string;
   LibrarySizeFilter_title: string;
   LibrarySizeFilter_label_minSize: string;
   LibrarySizeFilter_label_maxSize: string;
@@ -20,6 +22,8 @@ interface CustomLibraryFilter_properties {
  * @see CustomLibraryFilter_properties
  */
 const CustomLibraryFilter_properties: CustomLibraryFilter_properties = {
+  LibraryLocaleFilter_title: "Locale",
+  LibraryLocaleFilter_emptyText: "Select locales ...",
   LibrarySizeFilter_title: "Blob Size",
   LibrarySizeFilter_label_minSize: "Minimum",
   LibrarySizeFilter_label_maxSize: "Maximum",

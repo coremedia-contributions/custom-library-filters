@@ -7,7 +7,9 @@ Custom library filters
 This extension bundles a set of additional filters for the Studio Library.
 
 The following filter are included 
-* **Blow size filter** 
+* **Locale filter**
+Allows to filter search results by selected locales.
+* **Blob size filter** 
 Allows to filter binary content items like pictures, videos and downloads by size. 
 This extension also includes the definition of a size column for the library. Follow the instructions below to integrate it into the library.
 * **Orphaned items filter**
@@ -32,6 +34,9 @@ mvn -f workspace-configuration/extensions com.coremedia.maven:extensions-maven-p
 The size filter and the orphaned items filter require additional solr indices.
 In order to configure these just add the following to your ``apps/solr/modules/search/solr-config/src/main/app/configsets/content/conf/schema.xml``
 ```
+  <!-- for locale search filter -->
+  <field name="locale" type="string" indexed="true" stored="true"/>
+  
   <!-- for file size library column & search filter -->
   <field name="size" type="plong" indexed="true" stored="true"/>
 
