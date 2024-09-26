@@ -7,8 +7,14 @@
                            http://www.coremedia.com/2007/coremedia-spring-beans-customization
                            http://www.coremedia.com/2007/coremedia-spring-beans-customization.xsd">
 
+  <import resource="classpath:/com/coremedia/blueprint/base/multisite/bpbase-multisite-services.xml"/>
+
   <customize:append id="addLibraryFieldFeedablePopulators" bean="index" property="feedablePopulators">
     <list>
+      <bean id="localeFeedablePopulator"
+            class="com.coremedia.blueprint.feeder.populate.LocaleFeedablePopulator">
+        <property name="sitesService" ref="sitesService"/>
+      </bean>
       <bean id="blobSizeFeedablePopulator"
             class="com.coremedia.blueprint.feeder.populate.BlobSizeFeedablePopulator">
       </bean>

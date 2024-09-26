@@ -12,6 +12,7 @@ import SiteFilterPanel from "@coremedia/studio-client.main.editor-components/sdk
 import CustomLibraryFilter_properties from "./CustomLibraryFilter_properties";
 import SizeFilterPanel from "./filters/SizeFilterPanel";
 import OrphanedContentFilterPanel from "./filters/OrphanedContentFilterPanel";
+import LocaleFilterPanel from "./filters/LocaleFilterPanel";
 
 interface CustomLibraryFilterPluginConfig extends Config<StudioPlugin> {
 
@@ -32,11 +33,12 @@ class CustomLibraryFilterPlugin extends StudioPlugin {
           plugins: [
             Config(AddItemsPlugin, {
               items: [
+                Config(LocaleFilterPanel),
                 Config(SizeFilterPanel),
                 Config(OrphanedContentFilterPanel),
               ],
               before: [
-                Config(Component, {itemId: SiteFilterPanel.FILTER_ID}),
+                Config(Component, { itemId: SiteFilterPanel.FILTER_ID }),
               ],
             }),
           ],
@@ -47,10 +49,8 @@ class CustomLibraryFilterPlugin extends StudioPlugin {
         new CopyResourceBundleProperties({
           destination: resourceManager.getResourceBundle(null, ContentTypes_properties),
           source: resourceManager.getResourceBundle(null, CustomLibraryFilter_properties),
-
         }),
       ],
-
 
     }), config));
   }
