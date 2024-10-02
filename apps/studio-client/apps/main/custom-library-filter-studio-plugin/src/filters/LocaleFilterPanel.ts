@@ -119,6 +119,7 @@ class LocaleFilterPanel extends FilterPanel {
   override getDefaultState(): any {
     let defaultState = {};
     defaultState[LOCALE_FIELD_NAME] = "";
+    defaultState[LOCALES_STATE_FIELD]= [];
     return defaultState;
   }
 }

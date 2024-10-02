@@ -6,6 +6,11 @@ import Config from "@jangaroo/runtime/Config";
 import ConfigUtils from "@jangaroo/runtime/ConfigUtils";
 import FilterPanel from "@coremedia/studio-client.main.editor-components/sdk/collectionview/search/FilterPanel";
 import CustomLibraryFilter_properties from "../CustomLibraryFilter_properties";
+import IconDisplayField from "@coremedia/studio-client.ext.ui-components/components/IconDisplayField";
+import {SvgIconUtil} from "@coremedia/studio-client.base-models";
+import { help } from "@coremedia/studio-client.common-icons";
+import HBoxLayout from "@jangaroo/ext-ts/layout/container/HBox";
+
 
 interface OrphanedContentFilterPanelConfig extends Config<FilterPanel> {
 }
@@ -44,7 +49,14 @@ class OrphanedContentFilterPanel extends FilterPanel {
                 }),
               ],
             }),
+            Config(IconDisplayField, {
+              margin: "0 0 0 5",
+              itemId: `filterOrphanedContentToolTip`,
+              tooltip: CustomLibraryFilter_properties.LibraryOrphanedItemsFilter_tooltip,
+              iconCls: SvgIconUtil.getIconStyleClassForSvgIcon(help),
+            }),
           ],
+          layout: Config(HBoxLayout, {align: "left"}),
         }),
       ],
 

@@ -11,9 +11,13 @@ interface CustomLibraryFilter_properties {
   LibrarySizeFilter_emptyText: string;
   LibraryOrphanedItemsFilter_title: string;
   LibraryOrphanedItemsFilter_checkbox_label: string;
+  LibraryOrphanedItemsFilter_tooltip: string;
 
   SizeColumn_header: string;
 
+  LibraryDateRangeFilter_modificationdate_title: string;
+  LibraryDateRangeFilter_publicationdate_title: string;
+  LibraryDateRangeFilter_creationdate_title: string;
 }
 
 
@@ -28,10 +32,15 @@ const CustomLibraryFilter_properties: CustomLibraryFilter_properties = {
   LibrarySizeFilter_label_minSize: "Minimum",
   LibrarySizeFilter_label_maxSize: "Maximum",
   LibrarySizeFilter_emptyText: "Size in MB",
-  LibraryOrphanedItemsFilter_title: "Orphaned Items",
-  LibraryOrphanedItemsFilter_checkbox_label: "Only Show Orphaned Items",
+  LibraryOrphanedItemsFilter_title: "Orphaned Content",
+  LibraryOrphanedItemsFilter_checkbox_label: "Show orphaned Content",
+  LibraryOrphanedItemsFilter_tooltip: "Filter for content which is not referenced by any other content. The content may still used in dynamic queries.",
 
-  SizeColumn_header: "Size"
+  SizeColumn_header: "Size",
+
+  LibraryDateRangeFilter_modificationdate_title: "Modification Date",
+  LibraryDateRangeFilter_publicationdate_title: "Publication Date",
+  LibraryDateRangeFilter_creationdate_title: "Creation Date",
 };
 
 export default CustomLibraryFilter_properties;
