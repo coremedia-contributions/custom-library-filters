@@ -17,7 +17,7 @@ This extension also includes the definition of a size column for the library. Fo
 * **Orphaned items filter**
 Allows to filter for content which is not referenced by any other content. **Note:** The content may still used in dynamic queries.
 
-![Custom Library Filters](docs/images/custom-library-filter.gif)
+![Custom Library Filters](docs/images/custom-library-filters.gif)
 
 ## Installation
 
