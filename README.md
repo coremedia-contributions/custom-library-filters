@@ -12,10 +12,12 @@ Allows to filter search results by selected locales.
 * **Blob size filter** 
 Allows to filter binary content items like pictures, videos and downloads by size. 
 This extension also includes the definition of a size column for the library. Follow the instructions below to integrate it into the library.
+* **Improved date range filter**
+  Offers more flexibility when filtering for date ranges e.g. creation, modification or publication date
 * **Orphaned items filter**
-Allows to filter for content which is not referenced by any other content. 
+Allows to filter for content which is not referenced by any other content. **Note:** The content may still used in dynamic queries.
 
-![Custom Library Filters](docs/images/filters_screenshot.png)
+![Custom Library Filters](docs/images/custom-library-filter.gif)
 
 ## Installation
 

@@ -13,9 +13,10 @@ import CustomLibraryFilter_properties from "./CustomLibraryFilter_properties";
 import SizeFilterPanel from "./filters/SizeFilterPanel";
 import OrphanedContentFilterPanel from "./filters/OrphanedContentFilterPanel";
 import LocaleFilterPanel from "./filters/LocaleFilterPanel";
+import DateRangeFilterPanel from "./filters/DateRangeFilterPanel";
+import ReplaceItemsPlugin from "@coremedia/studio-client.ext.ui-components/plugins/ReplaceItemsPlugin";
 
 interface CustomLibraryFilterPluginConfig extends Config<StudioPlugin> {
-
 }
 
 class CustomLibraryFilterPlugin extends StudioPlugin {
@@ -38,8 +39,28 @@ class CustomLibraryFilterPlugin extends StudioPlugin {
                 Config(OrphanedContentFilterPanel),
               ],
               before: [
-                Config(Component, { itemId: SiteFilterPanel.FILTER_ID }),
+                Config(Component, {itemId: SiteFilterPanel.FILTER_ID}),
               ],
+            }),
+            Config(AddItemsPlugin, {
+              items: [
+                Config(DateRangeFilterPanel, {dateFieldName: "creationdate"}),
+              ],
+              before: [
+                Config(Component, {itemId: "datefilter-panel-modificationdate"}),
+              ],
+            }),
+            Config(ReplaceItemsPlugin, {
+              items: [
+                Config(DateRangeFilterPanel, {
+                  itemId: "datefilter-panel-publicationdate",
+                  dateFieldName: "publicationdate"
+                }),
+                Config(DateRangeFilterPanel, {
+                  itemId: "datefilter-panel-modificationdate",
+                  dateFieldName: "modificationdate"
+                }),
+              ]
             }),
           ],
         }),
