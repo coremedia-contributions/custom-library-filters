@@ -67,6 +67,10 @@ class DateRangeFilterPanel extends FilterPanel {
     let startDateQueryExpression = this.buildStartDateExpression();
     let endDateQueryExpression = this.buildEndDateExpression();
 
+    if (startDateQueryExpression === "*" && endDateQueryExpression === "NOW/HOUR") {
+      return null
+    }
+
     const query = `(${this.dateFieldName}:[${startDateQueryExpression} TO ${endDateQueryExpression}] AND isdeleted:false)`;
     console.debug(`DateRangeFilterPanel: build filter query: ${query} `)
     return query;

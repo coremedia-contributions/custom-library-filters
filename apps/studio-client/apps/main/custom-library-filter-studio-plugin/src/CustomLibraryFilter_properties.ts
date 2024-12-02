@@ -34,7 +34,7 @@ const CustomLibraryFilter_properties: CustomLibraryFilter_properties = {
   LibrarySizeFilter_emptyText: "Size in MB",
   LibraryOrphanedItemsFilter_title: "Orphaned Content",
   LibraryOrphanedItemsFilter_checkbox_label: "Show orphaned Content",
-  LibraryOrphanedItemsFilter_tooltip: "Filter for content which is not referenced by any other content. The content may still used in dynamic queries.",
+  LibraryOrphanedItemsFilter_tooltip: "Filter for content which is not referenced by any other content. The content may still be used in dynamic queries.",
 
   SizeColumn_header: "Size",
 
