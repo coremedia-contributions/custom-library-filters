@@ -15,10 +15,10 @@ public class BlobSizeFeedablePopulator implements FeedablePopulator<Content> {
     }
 
     if (content.getType().isSubtypeOf("CMPicture")) {
-      int size;
+      long size;
       Blob data = content.getBlob("data");
       if (data != null) {
-        size = data.getSize();
+        size = data.getSizeLong();
         feedable.setNumberElement(SOLR_SIZE_FIELD_NAME, size);
       }
     }
