@@ -1,4 +1,4 @@
-import BlobImpl from "@coremedia/studio-client.client-core-impl/data/impl/BlobImpl";
+import BlobImpl from "@coremedia/studio-client.client-core/data/impl/BlobImpl";
 import Column from "@jangaroo/ext-ts/grid/column/Column";
 import {as, bind} from "@jangaroo/runtime";
 import Config from "@jangaroo/runtime/Config";
